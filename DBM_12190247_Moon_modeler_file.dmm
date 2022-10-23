@@ -1,0 +1,1314 @@
+{
+	"tables": {
+		"6cd31223-4d35-4be4-8b39-8cc147d7b75f": {
+			"id": "6cd31223-4d35-4be4-8b39-8cc147d7b75f",
+			"visible": true,
+			"name": "Locations",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "3cb0c755-7e36-40d1-9e44-a95664b6c1b1",
+					"name": "Location_ID",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "21b7c46a-2f2a-4599-a7fa-ae79b128efde",
+					"name": "Locations_GPS",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "fbe65abb-89ad-465d-b2d5-88c109dbde37",
+					"name": "Locations_RFID",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "24a149ab-8bdc-4e85-86a6-f01bd97ec331",
+					"name": "Locations_name",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "00bce272-d56a-476e-a1df-84c49be2798c",
+					"name": "Locations_address",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "97aaded2-ea47-478e-9ee4-742684fdf51f",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [
+				"fd1a2e53-6436-4a31-a86d-3e82a488a5ce"
+			],
+			"keys": [
+				{
+					"id": "1899e11d-6670-4c62-a94a-abf3fd7404bf",
+					"name": "Locations_ID",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "2fc567bf-8a72-4f2b-a5f3-9fae60a25c6e",
+							"colid": "3cb0c755-7e36-40d1-9e44-a95664b6c1b1"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"bce9d350-28ec-4e64-b3c7-1028f383c0ca": {
+			"id": "bce9d350-28ec-4e64-b3c7-1028f383c0ca",
+			"visible": true,
+			"name": "Journeys",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "8a391d4a-6a08-4e70-837c-15859ce6f9d2",
+					"name": "Journey_ID",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "614f4451-f4f4-49a0-bd80-24c63951ff5d",
+					"name": "Driver_ID",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "884f35d1-616f-4458-8edb-123a6997145e",
+					"name": "Location_ID",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9af951ba-7ee6-4459-9522-63c4042f95e7",
+					"name": "Transport_Method_ID",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4d192a83-b8d0-4a1b-9fc9-f09670982c1d",
+					"name": "GPS_Date_TIme",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4a4b8c70-ce9b-46dd-ab8e-69a19cf6dd7e",
+					"name": "GPS_reading",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3d231828-e822-4aec-96c6-b94b82e2233c",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [
+				"fd1a2e53-6436-4a31-a86d-3e82a488a5ce",
+				"849b3f92-6b0a-4eb8-8231-126b86580d04"
+			],
+			"keys": [
+				{
+					"id": "3222dad4-0f77-4069-920b-c25c8d34e66f",
+					"name": "Journeys_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "cef72baf-a25a-4dcb-b41c-8cd2691b211d",
+							"colid": "8a391d4a-6a08-4e70-837c-15859ce6f9d2"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"863ebcb2-de59-4d01-94f1-0d561a66acc1": {
+			"id": "863ebcb2-de59-4d01-94f1-0d561a66acc1",
+			"visible": true,
+			"name": "Drivers",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "29d64ab3-c8b6-4647-8258-18f2f95b53c7",
+					"name": "Driver_ID",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "6f47c758-f5ae-42f3-a2d3-f040a4b5914c",
+					"name": "Driver_Demograpics",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "dd63510d-4acb-4a72-b309-54c26282d044",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [
+				"849b3f92-6b0a-4eb8-8231-126b86580d04"
+			],
+			"keys": [
+				{
+					"id": "7af0a316-f71d-4e3d-8d66-3e49c6e9cae9",
+					"name": "Drivers_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "35f98ac9-9c2d-4aad-8f3b-23ba8a3aa9f6",
+							"colid": "29d64ab3-c8b6-4647-8258-18f2f95b53c7"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a": {
+			"id": "5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a",
+			"visible": true,
+			"name": "Ref_Methods_of_Trasnport",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "0b532ac9-3b3c-4b0b-bee5-f86c5789a7f3",
+					"name": "Method_of_trasnport_code",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "779017f3-e4ea-4d94-899a-f81d39630fff",
+					"name": "Method_of_trasnport_name",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "403c7865-667e-4ace-984d-41755e101b5c",
+					"name": "Method_of_trasnport_description",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "61e87ad9-efc2-4dcb-a5f7-999035081167",
+					"name": "other_details",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"602befc5-8aa6-4cf8-b688-4eee2ecbc131"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "3bbc680c-a3d9-4b13-ba47-2358d4d8510e",
+					"name": "Ref_Methods_of_Trasnport_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "a5baa599-6aad-48ac-9eae-d2e665abc3d3",
+							"colid": "0b532ac9-3b3c-4b0b-bee5-f86c5789a7f3"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"abcd59bc-46ac-4a19-a0dc-ced864422264": {
+			"id": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+			"visible": true,
+			"name": "methods_of_Transport",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "983cd6f8-1ac9-43c6-910e-5f62b32c57b5",
+					"name": "Trasnport_Method_id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "200e12f4-921c-47c1-837a-0a9fdf8bcdf0",
+					"name": "",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "634e536c-4700-401e-acf9-de146cc0d028",
+					"name": "Ref_Methods_of_Trasnport_Method_of_trasnport_code",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Ref_Methods_of_Trasnport"
+				},
+				{
+					"id": "e4f2f794-dfbe-4096-a057-e9204884e02d",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"602befc5-8aa6-4cf8-b688-4eee2ecbc131"
+			],
+			"lines": [
+				"379a9dd8-66ce-464e-8f03-2f2b623250ad",
+				"2417e37b-94a6-469d-8d40-b7494e409df5",
+				"f240f7fd-b227-48cf-9f94-fae6fb1996de"
+			],
+			"keys": [
+				{
+					"id": "f48afe6b-c3e5-4dd1-aca1-ff5ceeb567fb",
+					"name": "methods_of_Transport_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "d2cb8778-6a5c-4e54-84da-f293e57cfc4a",
+							"colid": "983cd6f8-1ac9-43c6-910e-5f62b32c57b5"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"3bd8f859-04b4-40d4-8e54-51a49db09dfc": {
+			"id": "3bd8f859-04b4-40d4-8e54-51a49db09dfc",
+			"visible": true,
+			"name": "bicycles",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "58b8103b-44df-44ac-a4d3-5f911229a7aa",
+					"name": "bicycle_id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d15fa5a4-cdfa-43fe-8a1d-08158c137da7",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [
+				"379a9dd8-66ce-464e-8f03-2f2b623250ad"
+			],
+			"keys": [
+				{
+					"id": "3ca94c4d-aed3-4cbb-b77f-975194f8c416",
+					"name": "bicycles_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "45b321de-78d2-4a82-893b-0f0fb8063644",
+							"colid": "58b8103b-44df-44ac-a4d3-5f911229a7aa"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"171d303f-3764-44c0-b100-32daba93f539": {
+			"id": "171d303f-3764-44c0-b100-32daba93f539",
+			"visible": true,
+			"name": "Mass_Transport",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "533559ba-b092-4ab2-831b-f10712cc2028",
+					"name": "mass_trasnport_id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c620db40-2218-4abb-88fb-038a864a234d",
+					"name": "passenger_capacity",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c28c5720-f149-4bd5-8925-0027d1cd4f4b",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [
+				"2417e37b-94a6-469d-8d40-b7494e409df5"
+			],
+			"keys": [
+				{
+					"id": "833353e7-3634-4790-a9ca-0d3c05b1eb56",
+					"name": "Mass_Transport_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "1ad6594b-9e90-48c3-85fc-951644455893",
+							"colid": "533559ba-b092-4ab2-831b-f10712cc2028"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"abc5e70f-9ebd-4402-a695-955a5b929bfa": {
+			"id": "abc5e70f-9ebd-4402-a695-955a5b929bfa",
+			"visible": true,
+			"name": "Vehicles",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "029801ee-46d5-4239-81e2-24a9ff8931a0",
+					"name": "Vehicle_ID",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9dc6aa44-bf55-4b1d-8be7-b180c3bb8af0",
+					"name": "RFID",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d5ca389d-17d6-428e-a26b-f1e800d7ef1e",
+					"name": "Seat_capacity",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "e9f93c1b-77a2-486d-9fca-1b94f2aeed79",
+					"name": "vehicle_registration_number",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "c89a94d3-9038-47ab-b082-013f3556558a",
+					"name": "other_details",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "8ae586b4-ed5e-48d9-8272-bb03d7b22f84",
+					"name": "fuel_type",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "2c363a55-6498-4bbe-adc9-b73ca2a47004",
+					"name": "Ref_Fuel_Tpes_Fuel_Type_code",
+					"datatype": "integer",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Ref_Fuel_Tpes"
+				}
+			],
+			"relations": [
+				"96d9b775-de1b-4ecc-9fa8-1121ddd4c799"
+			],
+			"lines": [
+				"f240f7fd-b227-48cf-9f94-fae6fb1996de"
+			],
+			"keys": [
+				{
+					"id": "2339f07e-0328-4640-b734-0972f98fd935",
+					"name": "Vehicles_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "d4422ff8-dcaa-40fd-9164-c976218be32c",
+							"colid": "029801ee-46d5-4239-81e2-24a9ff8931a0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"fac5398d-9745-41e7-b993-a85a933e2fc5": {
+			"id": "fac5398d-9745-41e7-b993-a85a933e2fc5",
+			"visible": true,
+			"name": "Ref_Fuel_Tpes",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "1b5a4a87-fde5-4204-8e3d-bfd57fd52747",
+					"name": "Fuel_Type_code",
+					"datatype": "integer",
+					"pk": true,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "4c1a9247-ab3f-46b9-b77f-0346a0875154",
+					"name": "Fuel_Type_Name",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "62973bac-041c-492d-a75f-8ba79734da52",
+					"name": "Fuel_Type_Description",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "725fdeac-8557-4420-afce-c898dc846d07",
+					"name": "other_deails",
+					"datatype": "cstring",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"96d9b775-de1b-4ecc-9fa8-1121ddd4c799"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c3bf4766-7fab-4baf-b954-3b88f2dc0a37",
+					"name": "Ref_Fuel_Tpes_pkey",
+					"isPk": true,
+					"using": "",
+					"cols": [
+						{
+							"id": "b0b2536d-86a2-4e9c-9232-e0d1673d6f57",
+							"colid": "1b5a4a87-fde5-4204-8e3d-bfd57fd52747"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		}
+	},
+	"relations": {
+		"602befc5-8aa6-4cf8-b688-4eee2ecbc131": {
+			"id": "602befc5-8aa6-4cf8-b688-4eee2ecbc131",
+			"visible": true,
+			"name": "methods_of_Transport_Ref_Methods_of_Trasnport_Method_of_tr_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "3bbc680c-a3d9-4b13-ba47-2358d4d8510e",
+			"parent": "5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a",
+			"child": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "44b16bf3-b717-4056-b207-3529d27f497a",
+					"parentcol": "0b532ac9-3b3c-4b0b-bee5-f86c5789a7f3",
+					"childcol": "634e536c-4700-401e-acf9-de146cc0d028"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"96d9b775-de1b-4ecc-9fa8-1121ddd4c799": {
+			"id": "96d9b775-de1b-4ecc-9fa8-1121ddd4c799",
+			"visible": true,
+			"name": "Vehicles_Ref_Fuel_Tpes_Fuel_Type_code_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "c3bf4766-7fab-4baf-b954-3b88f2dc0a37",
+			"parent": "fac5398d-9745-41e7-b993-a85a933e2fc5",
+			"child": "abc5e70f-9ebd-4402-a695-955a5b929bfa",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "ba087496-dea2-4912-93ef-8de81c1fa579",
+					"parentcol": "1b5a4a87-fde5-4204-8e3d-bfd57fd52747",
+					"childcol": "2c363a55-6498-4bbe-adc9-b73ca2a47004"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {
+		"fd1a2e53-6436-4a31-a86d-3e82a488a5ce": {
+			"id": "fd1a2e53-6436-4a31-a86d-3e82a488a5ce",
+			"visible": true,
+			"name": "Locations-Journeys",
+			"desc": "",
+			"style": "solid",
+			"parent": "6cd31223-4d35-4be4-8b39-8cc147d7b75f",
+			"child": "bce9d350-28ec-4e64-b3c7-1028f383c0ca",
+			"lineColor": "transparent",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		},
+		"849b3f92-6b0a-4eb8-8231-126b86580d04": {
+			"id": "849b3f92-6b0a-4eb8-8231-126b86580d04",
+			"visible": true,
+			"name": "Drivers-Journeys",
+			"desc": "",
+			"style": "solid",
+			"parent": "863ebcb2-de59-4d01-94f1-0d561a66acc1",
+			"child": "bce9d350-28ec-4e64-b3c7-1028f383c0ca",
+			"lineColor": "transparent",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		},
+		"379a9dd8-66ce-464e-8f03-2f2b623250ad": {
+			"id": "379a9dd8-66ce-464e-8f03-2f2b623250ad",
+			"visible": true,
+			"name": "methods_of_Transport-bicycles",
+			"desc": "",
+			"style": "solid",
+			"parent": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+			"child": "3bd8f859-04b4-40d4-8e54-51a49db09dfc",
+			"lineColor": "transparent",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		},
+		"2417e37b-94a6-469d-8d40-b7494e409df5": {
+			"id": "2417e37b-94a6-469d-8d40-b7494e409df5",
+			"visible": true,
+			"name": "methods_of_Transport-Mass_Trasnport",
+			"desc": "",
+			"style": "solid",
+			"parent": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+			"child": "171d303f-3764-44c0-b100-32daba93f539",
+			"lineColor": "transparent",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		},
+		"f240f7fd-b227-48cf-9f94-fae6fb1996de": {
+			"id": "f240f7fd-b227-48cf-9f94-fae6fb1996de",
+			"visible": true,
+			"name": "methods_of_Transport-Vehicles",
+			"desc": "",
+			"style": "solid",
+			"parent": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+			"child": "abc5e70f-9ebd-4402-a695-955a5b929bfa",
+			"lineColor": "transparent",
+			"markerStart": "none",
+			"markerEnd": "arrowEnd",
+			"linegraphics": "basic",
+			"generate": true
+		}
+	},
+	"model": {
+		"name": "Midterm",
+		"id": "5b98e154-e66d-4906-8c4b-905087488c40",
+		"activeDiagram": "19673e61-32b4-4a0a-9762-c26c0ae56d67",
+		"desc": "",
+		"path": "",
+		"type": "PG",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 5,
+			"minor": 0,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"writeFileParam": false,
+		"currentDisplayMode": "metadata",
+		"def_coltopk": true,
+		"pg": {
+			"schema": ""
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed",
+			"includeGeneratedNames": "always"
+		},
+		"nameAutoGeneration": {
+			"keys": true,
+			"indexes": true,
+			"relations": true
+		},
+		"modelScriptFilePath": "C:\\Users\\Jasurbek\\Desktop\\Inha\\8th_semester\\EED\\DBM_Midterm_12190247_SQLScript"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"19673e61-32b4-4a0a-9762-c26c0ae56d67": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "19673e61-32b4-4a0a-9762-c26c0ae56d67",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"6cd31223-4d35-4be4-8b39-8cc147d7b75f": {
+					"referencedItemId": "6cd31223-4d35-4be4-8b39-8cc147d7b75f",
+					"x": 57,
+					"y": 77,
+					"gHeight": 166,
+					"gWidth": 205,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": true,
+					"autoExpand": true
+				},
+				"bce9d350-28ec-4e64-b3c7-1028f383c0ca": {
+					"referencedItemId": "bce9d350-28ec-4e64-b3c7-1028f383c0ca",
+					"x": 45,
+					"y": 314,
+					"gHeight": 153,
+					"gWidth": 262,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"863ebcb2-de59-4d01-94f1-0d561a66acc1": {
+					"referencedItemId": "863ebcb2-de59-4d01-94f1-0d561a66acc1",
+					"x": 279,
+					"y": 30,
+					"gHeight": 81,
+					"gWidth": 252,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a": {
+					"referencedItemId": "5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a",
+					"x": 568,
+					"y": 32,
+					"gHeight": 98,
+					"gWidth": 326,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"abcd59bc-46ac-4a19-a0dc-ced864422264": {
+					"referencedItemId": "abcd59bc-46ac-4a19-a0dc-ced864422264",
+					"x": 594,
+					"y": 282,
+					"gHeight": 98,
+					"gWidth": 447,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"3bd8f859-04b4-40d4-8e54-51a49db09dfc": {
+					"referencedItemId": "3bd8f859-04b4-40d4-8e54-51a49db09dfc",
+					"x": 322,
+					"y": 489,
+					"gHeight": 62,
+					"gWidth": 211,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"171d303f-3764-44c0-b100-32daba93f539": {
+					"referencedItemId": "171d303f-3764-44c0-b100-32daba93f539",
+					"x": 655,
+					"y": 473,
+					"gHeight": 81,
+					"gWidth": 249,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"abc5e70f-9ebd-4402-a695-955a5b929bfa": {
+					"referencedItemId": "abc5e70f-9ebd-4402-a695-955a5b929bfa",
+					"x": 1141,
+					"y": 464,
+					"gHeight": 153,
+					"gWidth": 313,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"fac5398d-9745-41e7-b993-a85a933e2fc5": {
+					"referencedItemId": "fac5398d-9745-41e7-b993-a85a933e2fc5",
+					"x": 1147,
+					"y": 201,
+					"gHeight": 98,
+					"gWidth": 263,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"6cd31223-4d35-4be4-8b39-8cc147d7b75f",
+		"bce9d350-28ec-4e64-b3c7-1028f383c0ca",
+		"863ebcb2-de59-4d01-94f1-0d561a66acc1",
+		"5d921cc9-5ef6-4d5b-9bfc-4dfab7969a1a",
+		"abcd59bc-46ac-4a19-a0dc-ced864422264",
+		"3bd8f859-04b4-40d4-8e54-51a49db09dfc",
+		"171d303f-3764-44c0-b100-32daba93f539",
+		"abc5e70f-9ebd-4402-a695-955a5b929bfa",
+		"fac5398d-9745-41e7-b993-a85a933e2fc5",
+		"602befc5-8aa6-4cf8-b688-4eee2ecbc131",
+		"96d9b775-de1b-4ecc-9fa8-1121ddd4c799",
+		"fd1a2e53-6436-4a31-a86d-3e82a488a5ce",
+		"849b3f92-6b0a-4eb8-8231-126b86580d04",
+		"379a9dd8-66ce-464e-8f03-2f2b623250ad",
+		"2417e37b-94a6-469d-8d40-b7494e409df5",
+		"f240f7fd-b227-48cf-9f94-fae6fb1996de"
+	],
+	"collapsedTreeItems": []
+}

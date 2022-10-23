@@ -1,0 +1,87 @@
+SET check_function_bodies = false;
+
+CREATE TABLE "Locations"(
+  "Location_ID" integer,
+  "Locations_GPS" cstring,
+  "Locations_RFID" cstring,
+  "Locations_name" cstring,
+  "Locations_address" cstring,
+  other_details cstring,
+  CONSTRAINT "Locations_ID" PRIMARY KEY("Location_ID")
+);
+
+CREATE TABLE "Journeys"(
+  "Journey_ID" integer,
+  "Driver_ID" integer NOT NULL,
+  "Location_ID" integer NOT NULL,
+  "Transport_Method_ID" integer NOT NULL,
+  "GPS_Date_TIme" date,
+  "GPS_reading" cstring,
+  other_details cstring,
+  CONSTRAINT "Journeys_pkey" PRIMARY KEY("Journey_ID")
+);
+
+CREATE TABLE "Drivers"(
+  "Driver_ID" integer,
+  "Driver_Demograpics" cstring,
+  other_details cstring,
+  CONSTRAINT "Drivers_pkey" PRIMARY KEY("Driver_ID")
+);
+
+CREATE TABLE "Ref_Methods_of_Trasnport"(
+  "Method_of_trasnport_code" integer NOT NULL,
+  "Method_of_trasnport_name" cstring,
+  "Method_of_trasnport_description" cstring,
+  other_details integer,
+  CONSTRAINT "Ref_Methods_of_Trasnport_pkey" PRIMARY KEY
+    ("Method_of_trasnport_code")
+);
+
+CREATE TABLE "methods_of_Transport"(
+  "Trasnport_Method_id" integer,
+  "" integer,
+  "Ref_Methods_of_Trasnport_Method_of_trasnport_code" integer NOT NULL,
+  other_details cstring,
+  CONSTRAINT "methods_of_Transport_pkey" PRIMARY KEY("Trasnport_Method_id")
+);
+
+CREATE TABLE bicycles(
+bicycle_id integer, other_details cstring,
+  CONSTRAINT bicycles_pkey PRIMARY KEY(bicycle_id)
+);
+
+CREATE TABLE "Mass_Transport"(
+  mass_trasnport_id integer,
+  passenger_capacity integer,
+  other_details cstring,
+  CONSTRAINT "Mass_Transport_pkey" PRIMARY KEY(mass_trasnport_id)
+);
+
+CREATE TABLE "Vehicles"(
+  "Vehicle_ID" integer,
+  "RFID" cstring,
+  "Seat_capacity" integer,
+  vehicle_registration_number integer,
+  other_details cstring,
+  fuel_type cstring,
+  "Ref_Fuel_Tpes_Fuel_Type_code" integer,
+  CONSTRAINT "Vehicles_pkey" PRIMARY KEY("Vehicle_ID")
+);
+
+CREATE TABLE "Ref_Fuel_Tpes"(
+  "Fuel_Type_code" integer,
+  "Fuel_Type_Name" cstring,
+  "Fuel_Type_Description" cstring,
+  other_deails cstring,
+  CONSTRAINT "Ref_Fuel_Tpes_pkey" PRIMARY KEY("Fuel_Type_code")
+);
+
+ALTER TABLE "methods_of_Transport"
+  ADD CONSTRAINT "methods_of_Transport_Ref_Methods_of_Trasnport_Method_of_tr_fkey"
+    FOREIGN KEY ("Ref_Methods_of_Trasnport_Method_of_trasnport_code")
+      REFERENCES "Ref_Methods_of_Trasnport" ("Method_of_trasnport_code");
+
+ALTER TABLE "Vehicles"
+  ADD CONSTRAINT "Vehicles_Ref_Fuel_Tpes_Fuel_Type_code_fkey"
+    FOREIGN KEY ("Ref_Fuel_Tpes_Fuel_Type_code")
+      REFERENCES "Ref_Fuel_Tpes" ("Fuel_Type_code");
